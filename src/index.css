@@ -1,13 +1,399 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ENTRY */
+.entry-container {
+  height: 100vh;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  background: #8686AC;
+}
+
+.portal-card {
+  padding: 60px 80px;
+  color: white;
+  background: #111;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 22px;
+  transition: 0.4s;
+}
+
+.portal-card:hover {
+  transform: scale(1.1);
+  background: crimson;
+}
+
+/* AUTH */
+.auth-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6D8196;
+}
+
+.auth-form {
+  background: white;
+  padding: 50px;
+  width: 340px;
+  border-radius: 12px;
+}
+
+.auth-form h2 {
+  margin-bottom: 20px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.switch-text {
+  margin-top: 15px;
+  color: blue;
+  cursor: pointer;
+}
+
+/* NAVBAR */
+nav {
+  background: #111;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+/* =========================
+   GLOBAL CUSTOMER STYLING
+========================= */
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #B3B3B3;
+  color: #f5f5f5;
+}
+
+h1, h2 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+p {
+  color: #b5b5b5;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+section {
+  margin-bottom: 80px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #333, transparent);
+  margin: 60px 0;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+/* =========================
+   360 VIEWER
+========================= */
+
+.viewer-box {
+  background: #151515;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  transition: transform 0.4s ease;
+}
+
+.viewer-box:hover {
+  transform: scale(1.02);
+}
+
+.viewer-box img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+.viewer-box p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   CONFIGURATOR
+========================= */
+
+.card {
+  background: #151515;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+.card button {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: #e10600;
+  color: white;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #ff1f1f;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   FEATURE HOTSPOTS
+========================= */
+
+.hotspot button {
+  background: transparent;
+  color: #e10600;
+  border: 1px solid #e10600;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hotspot button:hover {
+  background: #e10600;
+  color: white;
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.filters label {
+  background: #1b1b1b;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters label:hover {
+  background: #e10600;
+}
+
+/* =========================
+   COMPARISON TABLE
+========================= */
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #151515;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 15px;
+  text-align: center;
+}
+
+.compare-table thead {
+  background: #e10600;
+}
+
+.compare-table tbody tr:nth-child(even) {
+  background: #1b1b1b;
+}
+
+/* =========================
+   TRADE-IN TOOL
+========================= */
+
+.card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* =========================
+   FINANCE CALCULATOR
+========================= */
+
+input[type="range"] {
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* =========================
+   RESERVE BUTTON
+========================= */
+
+.primary-btn {
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #e10600, #900000);
+  color: white;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 20px 40px rgba(225,6,0,0.4);
+  transition: 0.4s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(225,6,0,0.6);
+}
+
+/* =========================
+   TEST DRIVE CALENDAR
+========================= */
+
+.card input[type="date"],
+.card input[type="time"] {
+  margin-bottom: 15px;
+}
+
+/* =========================
+   WHATSAPP FLOAT BUTTON
+========================= */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: white;
+  font-size: 26px;
+  padding: 16px;
+  border-radius: 50%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  animation: pulse 2s infinite;
+  z-index: 1000;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+}
+.home-options {
+  min-height: 100vh;
+  background: #B3B3B3;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.home-options p {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.options-grid button {
+  background: #151515;
+  border: none;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.options-grid button:hover {
+  background: #e10600;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(225, 6, 0, 0.5);
 }
